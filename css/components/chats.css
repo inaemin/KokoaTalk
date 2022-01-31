@@ -1,0 +1,75 @@
+.chat {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  padding: 0px 20px;
+  margin: 20px 0px;
+  position: relative;
+}
+
+.chat > .user__img {
+  width: 70px;
+  height: 70px;
+}
+
+.chat > .chat__info > .user__name {
+  font-size: 20px;
+}
+
+.chat > .chat__info > .user__message {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.chat > .chat__info {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+
+.chat > .chat__time {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(0%, -50%);
+  font-size: 14px;
+}
+
+.chat__time__unread {
+  width: 25px;
+  height: 25px;
+  margin-top: 5px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat > .user__img {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+  border: 1px solid black;
+}
+
+.chat:nth-child(1) > .user__img {
+  background-image: url("../gif/ron.gif");
+}
+
+.chat:nth-child(2) > .user__img {
+  background-image: url("../gif/hagrid.gif");
+}
+
+.chat:nth-child(3) > .user__img {
+  background-image: url("../gif/luna.gif");
+}

@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import "status-bar.css";
+@import "screens/login.css";
+@import "components/welcome-header.css";
+@import "components/header.css";
+@import "components/user.css";
+@import "components/chats.css";
+
+:root {
+  --red: #c62b29;
+  --yellow: #fcdb01;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  width: 100vw;
+  height: auto;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.nav div {
+  padding: 15px;
+  color: black;
+  font-size: 25px;
+}
+

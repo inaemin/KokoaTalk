@@ -1,0 +1,67 @@
+.user {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  padding: 0px 20px;
+  margin: 20px 0px;
+}
+
+.user__img {
+    width: 50px;
+    height: 50px;
+    background-size: cover; /*<-- background size */
+    background-position: center; /*<-- background position */
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  
+  .user:nth-child(2) > .user__img {
+    background-image: url("../gif/ron.gif");
+  }
+  
+  .user:nth-child(3) > .user__img {
+    background-image: url("../gif/hermione.gif");
+  }
+  
+  .user:nth-child(4) > .user__img {
+    background-image: url("../gif/hagrid.gif");
+  }
+  
+  .user:nth-child(5) > .user__img {
+    background-image: url("../gif/luna.gif");
+  }
+  
+  .user__info {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    justify-content: space-evenly;
+  }
+  
+  .user__name {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .user__message {
+    font-size: 14px;
+    color: gray;
+  }
+  
+  .main > .user__img {
+    width: 70px;
+    height: 70px;
+    background-image: url("../gif/harry.gif");
+  }
+  
+  .main > .user__info .user__name {
+    font-size: 25px;
+  }
+  
+  .main > .user__info .user__message {
+    font-size: 16px;
+  }
+  
+  .main {
+      margin: 10px 0px 30px 0px;
+  }
