@@ -1,0 +1,28 @@
+#no-mobile,
+#no-landscape {
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  top: 0;
+  background: var(--red);
+  color: var(--yellow);
+  font-weight: 600;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-align: center;
+}
+
+@media screen and (max-width: 645px) {
+  #no-mobile {
+    display: none;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  #no-landscape {
+    display: none;
+  }
+}

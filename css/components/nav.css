@@ -1,0 +1,92 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0px -5px 30px rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.nav div {
+  color: var(--yellow);
+  padding: 10px;
+  font-size: 30px;
+  animation: navAnimation 1s ease-in-out forwards;
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+@keyframes navAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+a:nth-child(2) > div {
+  animation-delay: 0.2s;
+}
+a:nth-child(3) > div {
+  animation-delay: 0.4s;
+}
+a:nth-child(4) > div {
+  animation-delay: 0.6s;
+}
+
+.nav i:hover {
+  animation: blinkAnimation 1s ease-in-out infinite;
+}
+
+@keyframes blinkAnimation {
+  0% {
+  }
+
+  50% {
+    color: white;
+  }
+
+  100% {
+  }
+}
+
+.red-dot {
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: var(--red);
+  border-radius: 50%;
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  animation: DotAnimation 2s ease-out infinite;
+}
+
+@keyframes DotAnimation {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-10px) rotateY(180deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.fa-dove ~ .red-dot {
+  animation: none;
+  top: 6px;
+  left: 40px;
+  width: 8px;
+  height: 8px;
+}

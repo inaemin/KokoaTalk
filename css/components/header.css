@@ -1,5 +1,6 @@
 .header {
   padding: 20px;
+  margin-top: 20px;
   font-size: 25px;
   font-weight: bold;
   display: flex;
@@ -9,5 +10,19 @@
 
 .header i {
   margin-left: 20px;
-  color: black;
+  color: var(--yellow);
+}
+
+@keyframes rotateCog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(180deg);
+  }
+}
+
+.header .fa-cog:hover {
+  will-change: transform;
+  animation: rotateCog 1.5s linear infinite;
 }

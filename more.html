@@ -26,52 +26,77 @@
     <header class="header">
       <span>More</span>
       <div>
-        <i class="fas fa-search"></i><i class="fas fa-music"></i><a href="settings.html"><i class="fas fa-cog"></i></a>
+        <i class="fas fa-search"></i
+        ></i
+        ><i class="fas fa-music"></i
+        ><a href="settings.html"><i class="fas fa-cog"></i></a>
       </div>
     </header>
-    <main class="friend-screen">
-      <div class="chat">
-        <div class="user__img"></div>
-        <div class="chat__info">
-          <span class="user__name">Ron</span>
-          <span class="user__message"
-            >i'll wait at the gryffindor common room.</span
-          >
+    <main class="more-screen">
+      <div class="myinfo">
+        <div class="myinfo__img"></div>
+        <div class="myinfo__info">
+          <div class="myinfo__name">Harry</div>
+          <div class="myinfo__message">Yes, I'm the Boy who Lived.</div>
         </div>
-        <div class="chat__time">
-          <span>21:22</span>
-          <span class="chat__time__unread">1</span>
+        <div><i class="far fa-comment-alt fa-2x"></i></div>
+      </div>
+      <div class="icon-bar">
+        <div class="icon">
+          <i class="far fa-calendar-check fa-2x"></i><span>Calendar</span>
+        </div>
+        <div class="icon">
+          <i class="far fa-hdd fa-2x"></i><span>Talk Drive</span>
+        </div>
+        <div class="icon">
+          <i class="far fa-laugh-wink fa-2x"></i><span>Emoticons</span>
+        </div>
+        <div class="icon">
+          <i class="fas fa-paint-brush fa-2x"></i><span>Themes</span>
+        </div>
+        <div class="icon">
+          <i class="far fa-user-circle fa-2x"></i><span>Account</span>
+        </div>
+        <div class="icon">
+          <i class="far fa-comments fa-2x"></i><span>Openchat</span>
+        </div>
+        <div class="icon">
+          <i class="fas fa-gift fa-2x"></i><span>Gift</span>
+        </div>
+        <div class="icon">
+          <i class="fas fa-gamepad fa-2x"></i></i><span>Game</span>
         </div>
       </div>
-      <div class="chat">
-        <div class="user__img"></div>
-        <div class="chat__info">
-          <span class="user__name">Hagrid</span
-          ><span class="user__message"></span>
-        </div>
+
+
+      <hr class="border" />
+      <div class="suggestions">
+        <div class="suggestions__title">Suggestions</div>
+        <div class="icon"><img class= "icon__img" src="wheezes.jpg" /><span>Weasley's Wizard Wheezes
+        </span></div>
+        <div class="icon"><img class="icon__img" src="quidditch.jpg" /><span>Quidditch</span></div>
       </div>
-      <div class="chat">
-        <div class="user__img"></div>
-        <div class="chat__info">
-          <span class="user__name">Luna</span
-          ><span class="user__message">..luna are you ok?</span>
-        </div>
-      </div>
+      
     </main>
     <nav class="nav">
       <a href="friends.html"
         ><div><i class="fas fa-hat-wizard"></i></div
       ></a>
       <a href="chats.html"
-        ><div><i class="fas fa-broom"></i></div
+        ><div style="position: relative;"><i class="fas fa-broom"></i><span class="red-dot">1</span></div
       ></a>
       <a href="find.html"
         ><div><i class="fas fa-magic"></i></div
       ></a>
       <a href="more.html"
-        ><div><i class="fas fa-dove"></i></div
+        ><div style="position: relative;"><i class="fas fa-dove"></i><span class="red-dot"></span></div
       ></a>
     </nav>
+
+    <div id="no-mobile"><span>Your screen is too big.<br>Please use mobile device.</span></div>
+    <div id="no-landscape">
+      <span>Your screen is in landscape mode.<br />Please rotate your device.</span>
+    </div>
 
     <script
       src="https://kit.fontawesome.com/b294cb09b8.js"

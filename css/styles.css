@@ -5,32 +5,40 @@
 @import "components/welcome-header.css";
 @import "components/header.css";
 @import "components/user.css";
-@import "components/chats.css";
+@import "screens/chats.css";
+@import "components/icon-bar.css";
+@import "screens/find.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "components/media-query.css";
+@import "components/nav.css";
+@import "screens/chat.css";
+
 
 :root {
   --red: #c62b29;
   --yellow: #fcdb01;
+  --black: #2a2d33;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
   width: 100vw;
   height: auto;
+  background: var(--black);
+  color: white;
 }
 
-.nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+.border {
+  margin: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.nav div {
-  padding: 15px;
-  color: black;
-  font-size: 25px;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
+main {
+  padding-bottom: 60px;
+}

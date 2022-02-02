@@ -3,65 +3,106 @@
   flex-direction: row;
   width: auto;
   padding: 0px 20px;
-  margin: 20px 0px;
+  margin: 0px 0px 20px 0px;
 }
 
 .user__img {
-    width: 50px;
-    height: 50px;
-    background-size: cover; /*<-- background size */
-    background-position: center; /*<-- background position */
-    border-radius: 10px;
-    margin-right: 10px;
+  width: 60px;
+  height: 60px;
+  background-size: cover; /*<-- background size */
+  background-position: center; /*<-- background position */
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.user:nth-child(4) > .user__img {
+  background-image: url("../gif/ron.gif");
+}
+
+.user:nth-child(5) > .user__img {
+  background-image: url("../gif/hermione.gif");
+}
+
+.user:nth-child(6) > .user__img {
+  background-image: url("../gif/hagrid.gif");
+}
+
+.user:nth-child(7) > .user__img {
+  background-image: url("../gif/luna.gif");
+}
+
+.user__info {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  justify-content: space-evenly;
+}
+
+.user__name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.user__message {
+  font-size: 14px;
+  color: gray;
+}
+
+.main > .user__img {
+  width: 70px;
+  height: 70px;
+  background-image: url("../gif/harry.gif");
+}
+
+.main > .user__info .user__name {
+  font-size: 20px;
+}
+
+.main > .user__info .user__message {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.main {
+  margin: 10px 0px 30px 0px;
+}
+
+.friend-screen__title {
+  padding: 10px 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#splash-screen {
+  background: #060c4a;
+  color: var(--yellow);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 110px;
+  animation: hideSplash 0.4s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+@keyframes hideSplash {
+  from {
+    opacity: 1;
   }
-  
-  .user:nth-child(2) > .user__img {
-    background-image: url("../gif/ron.gif");
+  to {
+    opacity: 0;
+    visibility: hidden;
   }
-  
-  .user:nth-child(3) > .user__img {
-    background-image: url("../gif/hermione.gif");
-  }
-  
-  .user:nth-child(4) > .user__img {
-    background-image: url("../gif/hagrid.gif");
-  }
-  
-  .user:nth-child(5) > .user__img {
-    background-image: url("../gif/luna.gif");
-  }
-  
-  .user__info {
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    justify-content: space-evenly;
-  }
-  
-  .user__name {
-    font-size: 20px;
-    font-weight: 600;
-  }
-  
-  .user__message {
-    font-size: 14px;
-    color: gray;
-  }
-  
-  .main > .user__img {
-    width: 70px;
-    height: 70px;
-    background-image: url("../gif/harry.gif");
-  }
-  
-  .main > .user__info .user__name {
-    font-size: 25px;
-  }
-  
-  .main > .user__info .user__message {
-    font-size: 16px;
-  }
-  
-  .main {
-      margin: 10px 0px 30px 0px;
-  }
+}
+
+#splash-screen i {
+  animation: broomAnimation 1s ease-in-out infinite;
+}
+
+@keyframes broomAnimation {
+  0% { transform: none; }
+  50% { transform: translateY(-20px);}
+  100% { transform: none; }
+}

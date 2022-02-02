@@ -1,0 +1,74 @@
+.myinfo {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.myinfo__img {
+  background-image: url("../gif/harry.gif");
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.myinfo__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 70px;
+}
+
+.myinfo__name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.myinfo__message {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.more-screen > .icon-bar {
+  padding: 20px 20px 10px 20px;
+  row-gap: 40px;
+}
+
+.more-screen > .icon-bar > .icon {
+  height: 70px;
+}
+
+.suggestions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 5px;
+  padding: 0px 20px;
+}
+
+.suggestions div {
+  padding-top: 10px;
+  height: auto;
+}
+
+.suggestions__title {
+  grid-area: 1/1/2/-1;
+}
+
+.suggestions > .icon > .icon__img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background: white;
+  margin: 10px;
+  padding: 2px;
+}
+
+.suggestions > .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}

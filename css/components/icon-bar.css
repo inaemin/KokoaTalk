@@ -1,0 +1,13 @@
+.icon-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+}
+.icon {
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}

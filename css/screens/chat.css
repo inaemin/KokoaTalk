@@ -1,0 +1,236 @@
+.chat-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 20px;
+  position: fixed;
+  width: 100%;
+  top: 40px;
+}
+
+.chat-header i {
+  padding: 0px 10px;
+}
+
+.chat-header a,
+.chat-header span {
+  width: 33%;
+}
+
+.chat-header span:nth-child(2) {
+  text-align: center;
+}
+
+.chat-header span:nth-child(3) {
+  text-align: right;
+}
+
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+.date span {
+  width: 140px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  margin: 20px 0px;
+}
+
+.message {
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  width: 70%;
+}
+
+.message__profile {
+  min-width: 55px;
+  max-width: 55px;
+  min-height: 55px;
+  max-height: 55px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../gif/ron.gif");
+  margin-right: 10px;
+}
+
+.message__main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.message__main__name {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+.message__main__text {
+  padding: 12px;
+  border-radius: 18px;
+  background: var(--yellow);
+  border-top-left-radius: 0;
+  color: black;
+  margin: 10px;
+  margin-left: 0;
+}
+
+.message__main__time {
+  position: absolute;
+  bottom: 14px;
+  right: -30px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+.my-message {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0px 20px;
+  margin-bottom: 10px;
+}
+
+.my-message__main {
+  position: relative;
+  width: 60%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+}
+
+.my-message__text {
+  padding: 12px;
+  border-radius: 18px;
+  background: white;
+  border-top-right-radius: 0;
+  color: black;
+  margin: 0px 8px;
+}
+
+.my-message__time {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+.reply {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #3f4247;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.reply__column:nth-child(1) {
+  color: rgba(255, 255, 255, 0.4);
+  width: auto;
+}
+
+.reply__column:nth-child(2) {
+  width: 75%;
+  height: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.reply__column:nth-child(2) i {
+  margin-left: 15px;
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.reply__column:nth-child(2) > div {
+  display: flex;
+  flex-direction: row;
+}
+
+.reply__column:nth-child(2) .fa-arrow-circle-up {
+  color: var(--yellow);
+}
+
+.reply__column:nth-child(2) input {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 18px;
+  width: 100%;
+}
+
+.reply__column:nth-child(2) input:focus-within {
+  outline: none;
+}
+
+.message {
+  animation: LeftShowUp 0.5s ease-in-out forwards;
+  will-change: transform;
+}
+
+.my-message {
+  animation: RightShowUp 0.5s ease-in-out forwards;
+  will-change: transform;
+}
+
+@keyframes LeftShowUp {
+  from {
+    transform: translateX(-400px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes RightShowUp {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.chat-screen {
+  overflow: hidden;
+}
+
+.reply:focus-within .reply__column:nth-child(1),
+.reply:focus-within .reply__column:nth-child(2) i {
+  opacity: 0;
+}
+
+.reply .reply__column:nth-child(1),
+.reply .reply__column:nth-child(2) i {
+  transition: all 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:nth-child(2) {
+  width: 95vw;
+  transform: translateX(-4%) translateY(-60px);
+}
+
+.reply:focus-within {
+  transform: translateY(60px);
+}
